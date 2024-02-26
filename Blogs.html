@@ -15,13 +15,32 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
       }
 
+      .home {
+        background: url(img/pexels-pixabay-316093.jpg);
+        height: 100vh;
+      }
+      video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      
+      }
       nav {
-        background-color: #333;
         color: #fff;
         text-align: center;
         padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
 
       nav a {
@@ -39,7 +58,6 @@
         margin-top: 0px;
         width: 100%;
         height: calc(100vh - 60px);
-        background: url(../img/header.png);
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -52,20 +70,28 @@
       .heading {
         color: #fff;
         text-transform: capitalize;
-        font-size: 80px;
-        line-height: 60px;
+        font-size: 90px;
+        line-height: 10px;
         margin-bottom: 80px;
+        padding-bottom: 50px;
       }
 
       .heading .small {
+        padding-top: 30px;
         display: block;
         font-size: 40px;
+        color: #fff;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-size: 55px;
       }
 
       .heading .no-fill {
-        font-style: italic;
+        font-family: sans-serif;
+        letter-spacing: 5px;
         color: transparent;
         -webkit-text-stroke: 2px #fff;
+        font-size: 15px;
       }
       .btn {
         padding: 10px 20px;
@@ -84,6 +110,10 @@
         grid-gap: 80px;
       }
 
+      .blog-title {
+        color: #fff;
+      }
+
       .blog-image {
         width: 100%;
         height: 250px;
@@ -91,10 +121,15 @@
         border-radius: 10px;
         margin-bottom: 10px;
       }
+      .blog-info {
+        padding: 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+      }
 
       .blog-overview {
         margin: 10px 0 20px;
         line-height: 30px;
+        color: #fff;
       }
 
       .btn.dark {
@@ -198,79 +233,105 @@
   </head>
 
   <body>
-    <nav>
-      <a href="#">HOME</a>
-      <a href="#">DASHBOARD</a>
-      <a href="#">REVIEWS</a>
-      <a href="#">ABOUT US</a>
-      <a href="#">CONTACT US</a>
-    </nav>
-    <header class="header">
-      <div class="content">
-        <h1 class="heading">
-          <span class="small">welcome in the world of</span>
-          blog
-          <span class="no-fill">writing</span>
-        </h1>
-        <a href="/editor" class="btn">write a blog</a>
-      </div>
-    </header>
+    <div class="vdo">
+      <video autoplay muted loop>
+         <source
+           src="Videos/pexels_videos_2348306 (2160p).mp4"
+           type="video/mp4"
+         />
+         Your browser does not support the video tag.
+       </video>
+    <div class="home">
+      <nav>
+        <img src="logo.png" alt="logo" />
+        <a href="#">HOME</a>
+        <a href="#">DASHBOARD</a>
+        <a href="#">REVIEWS</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT US</a>
+      </nav>
+      <header class="header">
+        <div class="content">
+          <h1 class="heading">
+            <span class="small">Budgeting Tips for Different Life Stages</span>
+            <span class="no-fill"
+              >Explore budgeting strategies tailored to various life stages,
+              such as college students, young professionals, families, or
+              retirees.</span
+            >
+          </h1>
+          <a href="/editor" class="btn">write a blog</a>
+        </div>
+      </header>
+    </div>
 
     <section class="blogs-section">
-      <div class="blog-card">
-        <img src="img/header.png" class="blog-image" alt="" />
+      <div class="blog-info">
+       <div class="blog-card">
+        <img src="img/1.png" class="blog-image" alt="" />
         <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <p class="blog-overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
-          fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
-        </p>
+          <p class="blog-overview">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
+            fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
+          </p>
+        </div>
         <a href="/" class="btn dark">read</a>
       </div>
-      <div class="blog-card">
-        <img src="img/header.png" class="blog-image" alt="" />
-        <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <p class="blog-overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
-          fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
-        </p>
-        <a href="/" class="btn dark">read</a>
-      </div>
-      <div class="blog-card">
-        <img src="img/header.png" class="blog-image" alt="" />
-        <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <p class="blog-overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
-          fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
-        </p>
-        <a href="/" class="btn dark">read</a>
-      </div>
-      <div class="blog-card">
-        <img src="img/header.png" class="blog-image" alt="" />
-        <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <p class="blog-overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
-          fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
-        </p>
-        <a href="/" class="btn dark">read</a>
-      </div>
-      <div class="blog-card">
-        <img src="img/header.png" class="blog-image" alt="" />
-        <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <p class="blog-overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
-          fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
-        </p>
-        <a href="/" class="btn dark">read</a>
-      </div>
-      <div class="blog-card">
-        <img src="img/header.png" class="blog-image" alt="" />
-        <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <p class="blog-overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
-          fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
-        </p>
-        <a href="/" class="btn dark">read</a>
-      </div>
+      <div class="blog-info">
+        <div class="blog-card">
+         <img src="img/2.png" class="blog-image" alt="" />
+         <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+           <p class="blog-overview">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
+             fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
+           </p>
+         </div>
+         <a href="/" class="btn dark">read</a>
+       </div>
+       <div class="blog-info">
+        <div class="blog-card">
+         <img src="img/3.png" class="blog-image" alt="" />
+         <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+           <p class="blog-overview">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
+             fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
+           </p>
+         </div>
+         <a href="/" class="btn dark">read</a>
+       </div>
+       <div class="blog-info">
+        <div class="blog-card">
+         <img src="img/4.png" class="blog-image" alt="" />
+         <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+           <p class="blog-overview">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
+             fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
+           </p>
+         </div>
+         <a href="/" class="btn dark">read</a>
+       </div>
+       <div class="blog-info">
+        <div class="blog-card">
+         <img src="img/5.png" class="blog-image" alt="" />
+         <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+           <p class="blog-overview">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
+             fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
+           </p>
+         </div>
+         <a href="/" class="btn dark">read</a>
+       </div>
+       <div class="blog-info">
+        <div class="blog-card">
+         <img src="img/6.png" class="blog-image" alt="" />
+         <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+           <p class="blog-overview">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt
+             fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.
+           </p>
+         </div>
+         <a href="/" class="btn dark">read</a>
+       </div>
     </section>
     <footer>
       <div class="container">
