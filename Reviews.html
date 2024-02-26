@@ -16,18 +16,55 @@
   margin: 0;
   padding: 0;
 }
+
+video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      
+      }
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(home.png);
+  height: 100vh;
+  display: flex;
+}
+.box{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 100%;
+}
+.topic {
+  text-align: center;
+  color: #fff; 
+  font-size: 25px;
+  margin-top: 150px;
+  margin-left: 50px;
+  
+}
+
 nav {
-        background-color: #333;
+        background:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); 
         color: #fff;
         text-align: center;
-        padding: 30px 0;
+        padding: 15px 0;
         display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      
       }
 
       nav a {
         color: #fff;
         text-decoration: none;
-        margin: 0 10px;
+        margin: 0px;
+        padding: 0px;
         font-size: 16px;
       }
 
@@ -35,15 +72,16 @@ nav {
         border-bottom: 2px solid #fff;
       }
 
-body{
-  display: flex;
-  height: 100vh;
-}
+      nav img {
+         width: auto;
+         height: auto;
+      }
+
 
 
 .rev-section{
   margin: auto;
-  padding: 0 1rem;
+  padding: 30px;
   max-width: 1100px;
   text-align: center;
 }
@@ -51,7 +89,8 @@ body{
 .title{
   font-size: 2.5rem;
   text-transform: uppercase;
-  color: rgb(50, 50, 50);
+  color:#fff;
+  font-weight: bold;
   margin-bottom: .5rem;
 }
 .note{
@@ -109,13 +148,100 @@ img{
   line-height: 1.5rem;
   letter-spacing: 1px;
   color: rgb(150, 150, 150);
-}
+} 
+footer{
+        background: #343434;
+        color: #fff;
+        padding-top: 50px;
+    }
+    .container{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #f18930;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: white;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: #f18930;
+    }
+    .social-icons i:hover{
+        color: #f18930;
+    }
+    .bottom-bar{
+        background: #f18930;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+
 
 @media (max-width: 678px){
   .review{
     margin-top: 1.5rem;
   }
-}
+} 
     </style>
 
     <title>REVIEWS</title>
@@ -131,25 +257,46 @@ img{
 
 </head>
 <body>
-<div>
-  <nav>
-    <a href="#">HOME</a>
-    <a href="#">DASHBOARD</a>
-    <a href="#">REVIEWS</a>
-    <a href="#">ABOUT US</a>
-    <a href="#">CONTACT US</a>
-  </nav>
+   <div class="vdo">
+      <video autoplay muted loop>
+         <source
+           src="Videos/pexels-artem-podrez-5725953 (720p).mp4"
+           type="video/mp4"
+         />
+         Your browser does not support the video tag.
+       </video>
+       <div class="video-overlay">
+      </div> 
 
+
+<div class="home">
+  <div class="nav">
+ 
+    <nav>
+      <img src="logo.png" alt="logo">
+      <a href="#">HOME</a>
+      <a href="#">DASHBOARD</a>
+      <a href="#">REVIEWS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT US</a>
+    </nav>
+    <div class="topic">
+      <h1>
+        "Explore what our users love about our budget tool"
+      </h1>
+      <p>Are you ready to start your journey with us?</p>
+    </div>
+  </div>
 </div>
 
+
 <div class="rev-section">
-
-<h2 class="title">Our Guests Love Us</h2>
-<p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam possimus perferendis non error neque.</p>
-
-<div class="reviews">
-
-<div class="review">
+   <div class="box">
+      <h2 class="title">Our Guests Love Us</h2>
+   </div>
+  
+  <div class="reviews">
+  <div class="review">
    <div class="head-review">
       <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
    </div>
@@ -201,9 +348,149 @@ img{
    </div>
 </div>
 
+ </div>
+   <div class="reviews">
+  <div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Nathan D.</div>
+      <div class="place-review">Germany</div>
+      <div class="rating">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Mary Will</div>
+      <div class="place-review">Paris</div>
+      <div class="rating">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Kevin Tuck</div>
+      <div class="place-review">New York</div>
+      <div class="rating">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
 </div>
 
+ </div>
+ <div class="reviews">
+  <div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Nathan D.</div>
+      <div class="place-review">Germany</div>
+      <div class="rating">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Mary Will</div>
+      <div class="place-review">Paris</div>
+      <div class="rating">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Kevin Tuck</div>
+      <div class="place-review">New York</div>
+      <div class="rating">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
 </div>
 
-</body>
+ </div>
+
+ </div>
+ <footer>
+  <div class="container">
+      <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email:Info@example.com</p>
+          <p>Phone:+121 56556 565556</p>
+          <p>Address:Your Address 123 street</p>
+      </div>
+      <div class="footer-content">
+          <h3>Quick Links</h3>
+           <ul class="list">
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">Contact</a></li>
+           </ul>
+      </div>
+      <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+           <li><a href=""><i class="fab fa-facebook"></i></a></li>
+           <li><a href=""><i class="fab fa-twitter"></i></a></li>
+           <li><a href=""><i class="fab fa-instagram"></i></a></li>
+           <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+          </div>
+  </div>
+  <div class="bottom-bar">
+      <p>&copy; 2023 your company . All rights reserved</p>
+  </div>
+</footer>
+
+ </body>
 </html>
